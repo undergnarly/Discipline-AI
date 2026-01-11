@@ -20,7 +20,7 @@ npm run build
 # Create .env.local
 echo "🔐 Creating .env.local..."
 cat > .env.local << 'EOF'
-NEXT_PUBLIC_API_URL=http://64.225.113.174/api
+NEXT_PUBLIC_API_URL=http://64.225.113.174/discipline/api
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 EOF

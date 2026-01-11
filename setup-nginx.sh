@@ -13,8 +13,8 @@ server {
     listen 80;
     server_name 64.225.113.174;
 
-    # Frontend (Next.js)
-    location / {
+    # Frontend (Next.js) on /discipline path
+    location /discipline {
         proxy_pass http://localhost:3000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
@@ -26,8 +26,9 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    # Backend API
-    location /api {
+    # Backend API on /discipline/api path
+    location /discipline/api {
+        rewrite ^/discipline/api/(.*) /api/$1 break;
         proxy_pass http://localhost:8000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
@@ -39,9 +40,10 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    # API Docs (optional, disable in production)
-    location /docs {
-        proxy_pass http://localhost:8000/docs;
+    # API Docs on /discipline/docs path (optional, disable in production)
+    location /discipline/docs {
+        rewrite ^/discipline/docs$ /docs break;
+        proxy_pass http://localhost:8000;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
