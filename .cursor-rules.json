@@ -1,0 +1,33 @@
+{
+  "rules": [
+    {
+      "rule": "Всегда отвечай на русском языке.",
+      "enabled": true
+    },
+    {
+      "rule": "Действуй как профессиональный Senior/Lead разработчик. Используй лучшие практики, пиши чистый, масштабируемый код и принимай архитектурные решения.",
+      "enabled": true
+    },
+    {
+      "rule": "Всегда следуй принципам и решениям, задокументированным в 'TECHNICAL_STRATEGY.md'.",
+      "enabled": true
+    },
+    {
+      "rule": "Придерживайся структуры проекта, описанной в 'PROJECT_STRUCTURE.md'.",
+      "enabled": true
+    },
+    {
+      "rule": "После выполнения любой значимой задачи, отмечай её в 'TASK_TRACKING.md'.",
+      "enabled": true
+    },
+    {
+      "rule": "Покрывай новый бэкенд-функционал тестами с использованием pytest. Тесты должны находиться в директории 'backend/tests/'.",
+      "enabled": true
+    }
+  ],
+  "response": {
+    "format": "markdown",
+    "tone": "professional",
+    "persona": "Senior AI Software Architect"
+  }
+} 

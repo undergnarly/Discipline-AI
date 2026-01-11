@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "discipline-ai-backend"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+pydantic-settings = "^2.0.0"
+sqlalchemy = {version = "^2.0.19", extras = ["asyncio"]}
+asyncpg = "^0.27.0"
+alembic = "^1.11.1"
+redis = "^4.6.0"
+celery = "^5.3.1"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+langchain = "^0.0.240"
+openai = "^0.27.8"
+pinecone-client = "^2.2.2"
+chromadb = "^0.4.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api" 
